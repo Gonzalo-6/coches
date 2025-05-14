@@ -5,24 +5,24 @@ head{
 
 
 body{
-    color: black;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: aqua;
-    line-height: 2px;
+    line-height: 1.6;
     padding: 15px;
 }
 
 
 header {
-    background-color: rgb(156, 228, 41);
-    color: black;
-    padding: 25px;
-    text-align:left;
-    border-radius: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 30px;
-    align-items: center;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .text-header {
     flex: 1;
@@ -31,21 +31,36 @@ header {
 
 }
 .Titulo{
-    background-color: red;
-    color: black;
-    font-size: 2rem;
+    color:#ff0000;
+    font-size: 2,5rem;
     padding: 5px;
     display: flex;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
 
 }
 
 .Subtitulo {
     font-style:italic;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1.2rem;
+    color: #ccc;
     padding: 5px;
     display: flex;
 }
+@media (max-width:768px){
+    .Titulo, .Subtitulo {
+        font-size: 1.2rem; /* más pequeño para móviles */
+        justify-content: center;
+        text-align: center; /* centrado del texto */
+        flex-direction: column;
+        display: flex;
+    }
+
+    .Titulo h1, .Subtitulo p {
+        margin: 0 auto;
+    }
+}
+
 .Portada {
     flex: 1;
     display: flex;
@@ -64,7 +79,7 @@ header {
 }
 
 .Menu {
-    background-color: rgb(211, 230, 177);
+    background-color: #262626;
     display: flex;
     justify-content: center; /* Centrar elementos */
     width: 100%; /* Asegurar que ocupa todo el ancho */
@@ -84,13 +99,13 @@ header {
 
 .Menu ul li a {
     text-decoration: none; /* Quita el subrayado */
-    color: black;
+    color: #f2f2f2;
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .Menu ul li a:hover{
-    color: yellowgreen;
+    color:#ff0000;
 }
 .Hero {
     margin: 20px;
@@ -103,7 +118,6 @@ header {
 .Hero h2 {
     font-size: 3rem;
     position: static;
-    color: rgb(26, 26, 25);
 }
 
 
@@ -115,7 +129,6 @@ font-size: 1rem;
 position:static;
 margin-top:10px;
 margin-bottom: 2rem;
-color: rgb(26, 26, 25);
 line-height: 1.5;
 }
 
@@ -202,14 +215,14 @@ form button {
     margin-top: 1rem;
     padding: 0.7rem;
     background:red;
-    color: white;
+    color: #ff0000;
     border: none;
     cursor: pointer;
     border-radius: 6px;
     font-weight: bold;
 }
 form button:hover {
-    background: rgb(164, 179, 31);
+    background: #ffc107;
 }
 
 form label {
